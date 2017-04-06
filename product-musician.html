@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="static/css/static/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="static/css/static/img/favicon.ico" type="image/x-icon">
+
+    <title>나만의 축가를 예약해보세요 - 셀프 웨딩은 프딩</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- My Custom Styles -->
+    <link href="static/css/style.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+    <link href="static/css/sticky-footer.css" rel="stylesheet">
+    <!-- Date & Time Picker CSS -->
+    <link rel="stylesheet" href="static/css/bootstrap-datetimepicker.min.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  	<!-- FB Log In -->
+  <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script><!-- FB Log In -->
+  
+   <!-- Navigation -->
+   <nav class="navbar navbar-default">
+	  <div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="index.html">
+		  	<img class="brand" style="display: inline-block" src="static/img/logo_s.png">
+		  	<span style="color:#c38e9e; margin-left:10px;">beta</span>
+		  </a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav navbar-right" id="signup-nav">
+		  	<li class="dropdown">
+				  <a href="help.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">도움말<span class="caret show-only-mobile"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="faq.html">자주묻는 질문</a></li>
+					<li><a href="customers.html">고객 관련</a></li>
+					<li><a href="partners.html">판매자 관련</a></li>
+					<li><a href="cs-center.html">고객센터</a></li>
+				  </ul>
+			</li>
+			<li class="dropdown">
+				  <a href="partner.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">파트너<span class="caret show-only-mobile"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="partner.html">서비스 등록하기</a></li>
+					<li><a href="my-service.html">나의 서비스</a></li>
+					<li><a href="my-reviews.html">후기</a></li>
+				  </ul>
+			</li>
+		  	<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">마이페이지<span class="caret show-only-mobile"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="wishlist.html">위시리스트</a></li>
+					<li><a href="reservation.html">예약 현황</a></li>
+					<li><a href="write-review.html">후기</a></li>
+				</ul>
+			 </li>
+			<li><a href="messenger.html">메시지 <span class="badge">42</span></a></li>
+			<li class="dropdown">
+			  <div class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				<img src="static/img/profile.png" alt="..." class="img-circle-nav">
+				<span class="caret"></span>
+			  </div>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				<li><button class="btn btn-link" date-dismiss="modal" data-toggle="modal" data-target="#edit-profile">나의 정보 관리</button></li>
+				<li><a href="#">로그아웃</a></li>
+				</ul>
+			  </li>		
+		  </ul>
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav><!-- /navbar --->
+	
+	<!--Nav Pop Ups -->
+	  <!-- Edit Profile -->
+	<div id="profilePicture" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div id="carousel" class="carousel slide" data-ride="carousel">
+					  	
+						  <!-- Indicators -->
+						  <ol class="carousel-indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						  </ol>
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner text-center" role="listbox">
+							<div class="item active">
+							  <img class="item" src="static/img/filler.jpg" alt="...">
+							</div>
+							<div class="item">
+							  <img class="item" src="static/img/filler.jpg" alt="...">
+							</div>
+						  </div>
+
+						  <!-- Controls -->
+						  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						  </a>
+						</div>  
+		</div>
+	  </div>
+	</div><!-- /Edit Profile -->
+   
+   <!-- Edit Profile -->
+	<div id="edit-profile" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">나의정보 수정</h4>
+		  </div>
+		  <div class="modal-body">
+			 <form class="form-horizontal">
+			 <div class="form-group">
+				<label class="col-sm-2 control-label">이름</label>
+				<div class="col-sm-10">
+				   <input type="text" class="form-control" id="inputName" placeholder="최승윤">
+				   <p class="input-info">안전한 웨딩 서비스를 위해서 실명을 가입해주세요.</p>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label class="col-sm-2 control-label">이메일</label>
+				<div class="col-sm-10">
+				   <input type="email" class="form-control" id="inputMail" placeholder="choimes@naver.com">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="inputPassword" class="col-sm-2 control-label">비밀번호</label>
+				<div class="col-sm-10">
+				  <input type="password" class="form-control" id="inputPassword" placeholder="비밀번호">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="inputPassword2" class="col-sm-2 control-label">비밀번호 확인</label>
+				<div class="col-sm-10">
+				  <input type="password" class="form-control" id="inputPassword2" placeholder="비밀번호">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="inputContact" class="col-sm-2 control-label">연락처</label>
+				<div class="col-sm-10">
+				  <input type="text" class="form-control" id="inputContact" placeholder="정보 없음">
+				  <p class="input-info">SMS 서비스로 고객님의 문의와 예약 관련 내용을 전달해드립니다.</p>
+				</div>
+			</div>
+			</form>
+		  	<div class="text-center">	 
+					<button type="button" class="btn btn-default" data-dismiss="modal">
+						완료
+					</button>
+					<button type="button" class="btn btn-light" data-dismiss="modal">취소</button>
+					<button type="button" style="float: right; margin-left: -70px;" class="btn btn-link" data-dismiss="modal" data-toggle="modal" data-target="#deleteProfile">탈퇴하기</button>
+			</div>
+		</div>
+		</div>
+	  </div>
+	</div><!-- /Edit Profile -->
+  
+  	 <!-- Delete Profile -->
+	<div id="deleteProfile" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">탈퇴하기</h4>
+		  </div>
+		  <div class="modal-body">
+				<p>탈퇴하면 프딩에 관련된  메시지, 예약결제 내용, 구매정보 등이 함께 삭제됩니다. 이로인해 추후 발생할 수 있는 데이터 복구 요청은 불가능합니다. 그래도 탈퇴하시겠습니까?</p>
+			
+		  	<div class="text-center">	 
+					<button type="button" class="btn btn-default" data-dismiss="modal">
+						네 탈퇴하겠습니다.
+					</button>
+					<button type="button" class="btn btn-light" data-dismiss="modal">취소</button>
+			</div>
+		</div>
+		</div>
+	  </div>
+	</div><!-- /Delete Profile -->
+   <!-- /Nav Pop Ups -->
+   
+   <!-- Allert Messages -->
+	   <!-- Order Complete -->
+		<div id="orderComplete" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-body">
+					<p>예약 요청이 완료되었습니다. 
+						판매자는 24시간 이내에 서비스 제공 여부를 답변드리며, 진행 상황에 대해 가입시 등록하신 휴대폰 연락처로 문자 메시지가 발송됩니다.</p>
+
+				<div class="text-center">	 
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							확인
+						</button>
+				</div>
+			</div>
+			</div>
+		  </div>
+		</div><!-- / Order Complete -->
+  	
+  		<!-- Product Busy -->
+		<div id="productBusy" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-body">
+					<p>해당 판매자의 스케줄상 지정하신 예식일에는 예약이 불가능합니다. 
+						상품 검색 필터를 활용하여 예약가능한 판매자를 찾아보세요.</p>
+
+				<div class="text-center">	 
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							확인
+						</button>
+				</div>
+			</div>
+			</div>
+		  </div>
+		</div><!-- / Product Busy -->
+		
+		<!-- Missing Information -->
+		<div id="addInfo" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-body">
+					<p>판매자 스케줄 확인을 위하여 기본정보를 입력해야만 
+						'예약요청'이 가능합니다. </p>
+
+				<div class="text-center">	 
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							확인
+						</button>
+				</div>
+			</div>
+			</div>
+		  </div>
+		</div><!-- / Missing Information -->
+		
+		<!-- Log In Please-->
+	<div id="login" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">로그인 후 이용 가능합니다. </h4>
+		  </div>
+		  <div class="modal-body">
+		  	<form class="form-horizontal">
+		  		<div class="form-group">
+				<label class="col-sm-2 control-label">이메일</label>
+				<div class="col-sm-10">
+				   <input type="email" class="form-control" id="inputMailsignin" placeholder="이메일">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="inputPasswordsignin" class="col-sm-2 control-label">비밀번호</label>
+				<div class="col-sm-10">
+				  <input type="password" class="form-control" id="inputPasswordsignin" placeholder="비밀번호">
+				</div>
+				</div>
+			 </form>
+			 <div>
+				<button type="button" class="btn btn-default" style="float: right; margin-right: 15px; margin-bottom: 10px;" data-dismiss="modal">로그인</button>
+			</div>	
+			<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
+		  </div>
+		  <div class="modal-footer">
+				<button type="button" class="btn btn-link" data-dismiss="modal" data-toggle="modal" data-target="#signup">
+					회원가입
+				</button>
+				<button type="button" style="float: right;" class="btn btn-link" data-dismiss="modal" data-toggle="modal" data-target="#findpw">
+					비밀번호 찾기
+				</button>
+		  </div>
+		</div>
+
+	  </div>
+	</div><!-- /Log In Please-->
+   	<!-- / Allert Messages -->
+   	
+    <!-- Begin page content -->
+    <!-- Profile Intro -->
+ 	<div class="jumbotron jumbotronbg" style="padding-bottom: 70px;">
+ 		<div class="container">
+ 		<!-- Profile Pictures-->
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<a date-dismiss="modal" data-toggle="modal" data-target="#profilePicture">
+					<div class="text-center">
+							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+							  <!-- Indicators -->
+							  <ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							  </ol>
+
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner text-center" role="listbox">
+								<div class="item active">
+								  <img class="item" src="static/img/filler.jpg" alt="...">
+								</div>
+								<div class="item">
+								  <img class="item" src="static/img/filler.jpg" alt="...">
+								</div>
+							  </div>
+
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							  </a>
+							  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							  </a>
+							</div>
+					</div>		
+				</a>	
+			</div>
+		<!-- / Proflie Pictures-->
+			<!-- Profile Info-->
+			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+				<!-- Title-->
+				<div class="row">
+					<h1 class="productPage-title">소피아의 통기타 축가</h1>
+				</div>	
+				<!-- Lables-->
+				<div class="row productPage-label">
+					<span class="label label-default" style="margin-left: 0px;"><img class="label-icon" src="static/img/icon/icon-9.png">	축가  (가요/팝), 1인 솔로
+					</span>
+					<span class="label label-default"><img class="label-icon" src="static/img/icon/icon-10.png">개인사업자</span>
+					<span class="label label-default"><img class="label-icon" src="static/img/icon/icon-11.png">리뷰 14</span>
+				</div>
+				<!-- Video-->
+				<div class="row productPage-video">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="//www.youtube.com/embed/ePbKGoIGAXY"></iframe>
+					</div>
+				</div>
+			</div><!-- /Profile Info-->
+			</div>
+	  </div><!-- Profile Intro -->
+	<!-- Profile Info -->  
+    <div class="container">
+    	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 productPage-orderWidget">
+    		<div class="productPage-orderTitle"><h3 style="color: white;">예약 요청</h3></div>
+				<div style="padding: 10px; border:1px solid #c38e9e; border-bottom-right-radius:10px; border-bottom-left-radius:10px;">
+						<div class="form-group">
+						  <label for="location" class="control-label">예식 지역</label>
+						  <select class="form-control" name="" id="location">
+							  <option value="">서울특별시</option>
+							</select>
+						</div>
+						<div class="form-group">
+						  <label for="day" class="control-label">예식일</label>
+						  <div class="input-group date" id="datepicker">
+							<input type="text" class="form-control" />
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-calendar"></span>
+							</span>
+						</div>
+						</div>
+						<div class="form-group">
+						  <label for="location1" class="control-label">예식시간</label>
+							 <div class="input-group date" id="timepicker">
+								<input type="text" class="form-control" />
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-time"></span>
+								</span>
+							</div>
+						</div>
+						<div class="form-group">
+						 <label for="location1" class="control-label">예식창 주소</label>
+						  	<div class="input-group" style="margin-bottom: 5px;">
+							  	<input id="adress-1" type="text" class="form-control input-sm">
+							  	<span class="input-group-btn"><button class="btn btn-sm" type="button">우편 번호</button></span>
+							  </div>
+							  <input id="adress-2" type="text" class="form-control input-sm" placeholder="'예식장명'과 '예식홀'을 적어주세요. ">
+						</div>
+						<div class="form-group">
+						  <label for="contact">연락처</label>
+						  <input type="text" class="form-control" id="contact" placeholder="판매자 답변을 SMS로 안내해드립니다.">
+						</div>
+						  <div class="form-group">
+						  <label for="add-info" class="control-label">요청사항</label>
+								<textarea class="form-control" rows="3"> </textarea>
+						  </div>
+						
+						<div class="price-bg">
+							<div class="form-horizontal">
+								<p class="orderWidget-price">서울특별시 요금 <span style="float: right;">200,000원</span></p>
+							</div> 
+							<div class="form-horizontal" style="border-top: 1px solid white;">
+								<p class="orderWidget-price">서비스 수수료 
+									<a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="서비스 수수료?" data-content="수수료는 프딩 플랫폼을 운영하고 다양한 서비스를 제공하기 위해 사용됩니다.  
+"><span class="glyphicon glyphicon-question-sign"></span></a>
+								 <span style="float: right;">20,000원</span></p>
+							</div>
+							<div class="form-horizontal" style="border-top: 1px solid white;">
+								<p class="orderWidget-price">합계	<span style="float: right;">220,000원</span></p> 
+							</div>
+						</div>
+						<div class="text-center">
+							<button class="btn btn-default dropdown-toggle" type="button">
+								예약 요청하기 
+							  </button>
+							  <p style="font-size:12px; margin-top:10px;">
+							  	예약 요청은 결제가 되는 것이 아닙니다.
+								판매자가 24시간 이내로 스케줄을 확인하여 답변드립니다.
+							  </p>
+						</div>
+				</div>
+				<div class="row" style="padding: 15px;">
+					<button class="btn btn-light dropdown-toggle" style="width: 49%;" type="button">
+						<span class="glyphicon glyphicon-heart-empty"></span> 위시리스트 
+					</button>
+					<button class="btn btn-default dropdown-toggle" style="width: 49%;" type="button">
+						<span class="glyphicon glyphicon-envelope"></span> 메시지
+					</button>	  		  
+				</div>
+    	</div>
+    	<!-- Extra Profile Info-->
+ 		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+ 			<div class="row" style="padding: 20px; margin-top: -110px;">
+ 				<div class="bg" style="background-color: white; border:1px solid #c38e9e; border-bottom: none; border-top-left-radius: 10px; border-top-right-radius: 10px; padding-top:20px; padding-left: 30px; padding-right: 10px; padding-bottom: 11px; margin-left:-25px; margin-right:-25px;">
+ 					<h4 class="title" style="margin-top: 0px;">영상</h4>
+ 				</div>
+ 				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 video-playlist">
+						<ul class="track-list">
+							<li><span class="glyphicon glyphicon-play-circle play-icon"></span> 그댄 달라요 - 지코</li>
+							<li><span class="glyphicon glyphicon-play-circle play-icon"></span> 난 너만 바라봐 - 태양</li>
+							<li><span class="glyphicon glyphicon-play-circle play-icon"></span> 그댄 달라요 - 지코</li>
+						</ul>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 video-playlist-right">
+						<ul class="track-list">
+							<li><span class="glyphicon glyphicon-play-circle play-icon"></span> 그댄 달라요 - 지코</li>
+							<li><span class="glyphicon glyphicon-play-circle play-icon"></span> 보고싶다 - 김범수</li>
+							<li><span class="glyphicon glyphicon-play-circle play-icon"></span> 난 너만 바라봐 - 태양</li>
+						</ul>
+					</div>
+				</div>	
+ 			</div>
+ 			<div class="row" style="border-top: 1px solid #4D5254; padding: 20px;">
+ 				<h4 class="title">추천 축가</h4>
+ 				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 playlist">
+						<ul class="track-list">
+							<li>보고싶다 - 김범수</li>
+							<li>난 너만 바라봐 - 태양</li>
+							<li>그댄 달라요 - 지코</li>
+						</ul>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 playlist-2">
+						<ul class="track-list">
+							<li>난 너만 바라봐 - 태양</li>
+							<li>그댄 달라요 - 지코</li>
+							<li>그댄 달라요 - 지코</li>
+						</ul>
+					</div>
+				</div>	
+				
+ 			</div>
+ 			<div class="row" style="border-top: 1px solid #4D5254; padding: 20px;">
+ 				<h4 class="title">경력</h4>
+ 				<p>안녕하세요. 
+					저는 소피아라고 합니다.  
+					현재 한국에서 5년 째 음악활동을 하고 있습니다.
+				</p>
+				<div class="collapse" id="introduction" style="margin-top: -10px;">
+					<p> 
+						2년 전 부터 지인들에게 축가를 해주던 것을 시작으로 해서 지금은 전문 프리랜서로 활동 중입니다. 
+						통기타와 함께 편안하고 따듯한 음악으로 하객 분들에게 좋은 음악 선물을 해보세요.
+						저의 축가가 어울리는 웨딩 분위기는 달빛소년, 옥상위의 고양이, 어반차카바와 같은어쿠스틱 공연이 전문입니다. 한국말도 아주 잘합니다. 감사합니다.
+					</p>
+         		</div>
+          		<button type="btn" class="btn btn-sm btn-light" data-toggle="collapse" style="float: right" data-target="#introduction">
+					자세히 보기 
+				</button>
+				
+ 			</div>
+ 			<div class="row" style="border-top: 1px solid #4D5254; padding: 20px;">
+ 				<h4 class="title">소개</h4>
+ 				
+ 				<ul class="track-list">
+ 					<li>단국대학교  생활음악과  입학 (2010)</li>
+					<li>'2012 MBC 대학가요제 우수상' (2011)</li>
+					<li>솔로 앨범 1집 레베카 (2013)</li>
+					<li>크라잉넛 4집 앨범 작업 참여 (2014)</li>
+					<li>축가 에이전시 '상상축가' 활동 (2015)</li>
+				</ul>
+ 			</div>
+ 			<div class="row" style="border-top: 1px solid #4D5254; padding: 20px;">
+ 				<h4 class="title">서비스 지역</h4>
+ 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" style="padding: 0px">
+					<ul class="track-list">
+						<li>서울특별시</li>
+						<li>경기도 수원시</li>
+						<li>경디도 안산시</li>
+					</ul>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" style="padding: 0px">
+					<ul class="track-list">
+						<li>200,000원</li>
+						<li>200,000원</li>
+						<li>220,000원</li>
+					</ul>
+				</div>
+ 			</div>
+ 			<div class="row" style="border-top: 1px solid #4D5254; padding: 20px;">
+ 				<h4 class="title">포함 사항</h4>
+ 				<ul class="track-list">
+ 					<li>축가 한 곡</li>
+					<li>예식 30분 전 도착 </li>
+					<li>축가 MR MP3 파일 </li>
+					<li>판매자 식대비용</li>
+					<li>교통비용</li>
+				</ul>
+ 			</div>
+ 			<div class="row" style="border-top: 1px solid #4D5254; padding: 20px;">
+ 				<h4 class="title">불포함 사항</h4>
+ 				<p>앵콜 공연 
+					MR 파일 외 음향 장비
+
+					*불포함 사항에 대한 요청시 추가 요금이 발생할 수 있습니다. 
+				</p>
+ 			</div>
+ 			<div class="row" style="border-top: 1px solid #4D5254; padding: 20px;">
+ 				<h4 class="title">기타 사항</h4>
+ 				<p>30분 이상의 예식 지연으로 인한 축가 공연 시간 변경 시 예약이 자동 취소 될 수 있으며, 그에 대한 환불은 불가합니다.  
+				</p>
+ 			</div>
+ 		</div><!-- /Extra Profile Info-->
+    </div><!-- / Profile Info-->
+    
+    <!-- Comment Section -->
+    <div class="container">
+	  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 row" style="border-top:solid 1px #4d5254; margin-bottom: 40px;">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style=" margin-top: 10px">
+		  <h3 class="title" style="display: inline-block; margin-right: 70px;">후기</h3> <span>예약결제하신 고객만 후기 작성이 가능합니다.</span>
+			<section class="comment-list" style="margin-top: 20px;">
+			  <!-- First Comment -->
+			  <article class="row">
+				<div class="col-md-12 col-sm-12">
+				  <div class="panel panel-default arrow left">
+					<div class="panel-body">
+					  <header class="text-left">
+						<h5 class="comment-userName">3월 공주</h5>
+					  </header>
+					  <div class="comment-post">
+					  	<time class="comment-date" datetime="16-12-2014 01:05">2016.5.6 15:03</time>
+						<p>
+						  축가 너무 좋았고요, 하객 분들이 좋아하셔서 참 좋았어요! 
+							특히 기타 연주가 너무 아름다웠고, 제가 좋아하는 어반 차카파의 노래여서 더욱 좋았습니다. 
+							다른 신부님들께도 추천 드려요.
+						</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </article>
+			  <!-- Second Comment Reply -->
+			  <article class="row">
+			  	<div class="col-lg-1 col-md-1 col-sm-1"></div>
+				<div class="col-md-11 col-sm-11">
+				  <div class="panel panel-default arrow left">
+					<div class="panel-heading right">Reply</div>
+					<div class="panel-body">
+					  <header class="text-left">
+						<div class="comment-user"><h5 class="comment-userName">소피아</h5><span><div class="label label-comment">판매자</div></span></div>
+						<time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> 2016.5.6 15:14</time>
+					  </header>
+					  <div class="comment-post">
+						<p>
+						불러줘서 감사합니다 ! 너무 아름더우셨어요~~ 주변에 홍보 많이 해주세요ㅎ
+						아이유 닮으셨어요!
+						</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </article>
+
+			</section>
+		</div>
+	  </div>
+	</div>
+    
+    <!-- Mobile Order Widget -->
+    <!-- Mobile Order Pop Up -->
+	<div id="orderWidget-mobile" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">예약 요청</h4>
+		  </div>
+		  <div class="modal-body">
+			<div class="form-group">
+						  <label for="location" class="control-label">예식 지역</label>
+						  <select class="form-control" name="" id="location-mobile">
+							  <option value="">서울특별시</option>
+							</select>
+						</div>
+						<div class="form-group">
+						  <label for="day" class="control-label">예식일</label>
+						  <div class="input-group input-append date" id="datePicker-mobile">
+							<input type="text" class="form-control" name="date" />
+							<span class="input-group-addon add-on">
+								<span class="glyphicon glyphicon-calendar"></span>
+							</span>
+							</div>
+						</div>
+						<div class="form-group">
+						  <label for="location1" class="control-label">예식시간</label>
+							 <div class="input-group input-append date" id="timePicker-mobile">
+								<input type="text" class="form-control" name="time" />
+								<span class="input-group-addon add-on"><span class="glyphicon glyphicon-time"></span></span>
+							</div>
+						</div>
+						<div class="form-group">
+						 <label for="location1" class="control-label">예식창 주소</label>
+						  	<div class="input-group" style="margin-bottom: 5px;">
+							  	<input id="adress-1-mobile" type="text" class="form-control input-sm">
+							  	<span class="input-group-btn"><button class="btn btn-sm" type="button">우편 번호</button></span>
+							  </div>
+							  <input id="adress-2-mobile" type="text" class="form-control input-sm" placeholder="'예식장명'과 '예식홀'을 적어주세요. ">
+						</div>
+						<div class="form-group">
+						  <label for="contact">연락처</label>
+						  <input type="text" class="form-control" id="contact-mobile">
+						</div>
+						  <div class="form-group">
+						  <label for="add-info" class="control-label">요청사항</label>
+								<textarea class="form-control" rows="3" > </textarea>
+						  </div>
+						
+						<div class="price-bg">
+							<div class="form-horizontal">
+								<p class="orderWidget-price">서울특별시 요금 <span style="float: right;">200,000원</span></p>
+							</div> 
+							<div class="form-horizontal" style="border-top: 1px solid white;">
+								<p class="orderWidget-price">서비스 수수료 <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="서비스 수수료?" data-content="수수료는 프딩 플랫폼을 운영하고 다양한 서비스를 제공하기 위해 사용됩니다.  
+"><span class="glyphicon glyphicon-question-sign"></span></a><span style="float: right;">20,000원</span></p>
+							</div>
+							<div class="form-horizontal" style="border-top: 1px solid white;">
+								<p class="orderWidget-price">합계	<span style="float: right;">220,000원</span></p> 
+							</div>
+						</div>
+						<div class="text-center">
+							<button class="btn btn-default" type="button">
+								예약 요청하기 
+							  </button>
+							  <p style="font-size:12px; margin-top:10px;">
+							  	예약 요청은 결제가 되는 것이 아닙니다.
+								판매자가 24시간 이내로 스케줄을 확인하여 답변드립니다.
+							  </p>
+						</div>
+			</div>
+		</div>
+	  </div>
+	</div><!-- /Edit Profile -->
+    
+    <div class="navbar-fixed-bottom productPage-mobileOrder">
+		<div class="container">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" style="padding:5px; padding-bottom: 0px;">
+				<div class="row">
+					<button type="button" class="btn btn-default" style="width:100%" date-dismiss="modal" data-toggle="modal" data-target="#orderWidget-mobile">예약 요청하기</button>
+				</div>	
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:5px;">
+				<div class="row">
+					<button class="btn btn-light" type="button" style="width: 49%;">
+						<span class="glyphicon glyphicon-heart-empty"></span> 위시리스트
+					</button>
+					<button class="btn btn-light" type="button" style="width: 49%;">
+						<span class="glyphicon glyphicon-envelope"></span> 메시지
+					</button>
+				</div>
+			</div>
+	   </div>	
+	</div> <!-- /Mobile Order Widget -->
+
+    <footer class="footer">
+      <div class="container">
+        	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+					<ul class="footer-ul">
+						<li><a href="cs-center.html">고객센터</a></li>
+						<li><a href="contact.html">제휴문의</a></li>
+						<li><a href="terms.html">이용약관</a></li>
+						<li><a href="terms-personal.html">개인정보 보호약관</a></li>
+					</ul>
+    			</div>
+   		  <div class="col-lg-10 col-md-11 col-sm-11 col-xs-12">
+   			<p>상호: 주식회사 집브라더스   ㅣ 대표자: 임지훈<br>
+					제1 소재지:  서울특별시 강남구 학동로 311 B1, 325호   ㅣ  제2 소재지: 서울시 강남구 강남대로 114길 15<br>
+					이메일: cs@zipbrothers.kr   ㅣ 서비스 이용문의: 070-8805-4206<br>
+					사업자등록번호: 108-332-3212      ㅣ 통신판매업신고: 제2016 - 서울강남-40193호<br>
+					<span style="color: #B8B8B8; font-size: 12px;">주식회사 집브라더스는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 주식회사 집브라더스는 상품/거래정보 및 거래에 대하여 책임을 지지 않습니다.<br><br></span>
+					ALL RIGHT RESERVED @ ZIP BROTHERS Ltd., <br><br>
+   			  </p>
+    		</div>
+    		<div class="col-lg-2 col-md-1 col-sm-1 col-xs-12">
+				<!-- KB에스크로 이체 인증마크 적용 시작 -->
+				<script>
+				function onPopKBAuthMark()
+				{
+				window.open('','KB_AUTHMARK','height=604, width=648, status=yes, toolbar=no, menubar=no,ORM.action='https://okbfex.kbstar.com/quics';B_AUTHMARK_FORM.target='KB_AUTHMARK';
+				document.KB_AUTHMARK_FORM.submit();
+				}
+				</script>
+				<form name="KB_AUTHMARK_FORM" method="get">
+				<input type="hidden" name="page" value="C021590"/>
+				<input type="hidden" name="cc" value="b034066:b035526"/>
+				<input type="hidden" name="mHValue" value="4dc7425a2c5fe223eed598aef67228a5201702211733669"/>
+				</form>
+				<a href="#" onclick="javascript:onPopKBAuthMark();return false;">
+				<img src="http://img1.kbstar.com/img/escrow/escrowcmark.gif" border="0"/>
+				</a>
+				<!-- KB에스크로이체 인증마크 적용 종료 -->
+   			</div>
+      </div>
+    </footer>
+
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="static/js/bootstrap.min.js"></script>
+    <!-- Pop Over Function -->
+     <script>
+		$(function () {
+	  $('[data-toggle="popover"]').popover()
+	})</script>
+    
+     <!-- Date @ Time Picker -->
+	<script type="text/javascript" src="static/js/moment.min.js"></script>
+    <script type="text/javascript" src="static/js/bootstrap-datetimepicker.min.js"></script>
+      <script type="text/javascript">
+            $(function () {
+                $('#datepicker').datetimepicker({
+                    locale: 'ko',
+					format: 'LL'
+				});	
+            });
+		  
+		  $(function () {
+                $('#timepicker').datetimepicker({
+                    locale: 'ko',
+					format: 'LT'
+				});	
+            });
+        </script>
+        <script>
+				(function($) {
+				var element = $('.productPage-orderWidget'),
+					originalY = element.offset().top;
+
+				// Space between element and top of screen (when scrolling)
+				var topMargin = 20;
+					
+				$(window).on('scroll', function(event) {
+					var scrollTop = $(window).scrollTop();
+
+					element.stop(true, true).animate({
+						top: scrollTop < originalY
+								? 0
+								: scrollTop - originalY + topMargin 
+					}, 0);
+				});
+			})(jQuery);
+	  </script>
+  </body>
+</html>

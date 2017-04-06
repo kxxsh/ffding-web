@@ -1,0 +1,189 @@
+@charset "utf-8";
+/* CSS Document */
+body {color:#4d5254;}
+
+/* Link */
+a {color:#c38e9e;text-decoration: none;}
+a.active {font-weight: bold;}
+a:hover {color:#c38e9e; text-decoration: none; font-weight: bold;}
+
+/* Basic Button */
+.btn-default {background-color:#c38e9e; color:white; border: 1px solid #c38e9e;}
+.btn-primary {background-color:#c38e9e; color:white; border: 1px solid #c38e9e;}
+.btn-primary:visited {background-color:#c38e9e; color:white; border: 1px solid #c38e9e;}
+.btn-primary:hover {background-color:#c38e9e; color:white; border: 1px solid #c38e9e;}
+.btn-primary:active {background-color:#c38e9e; color:white; border: 1px solid #c38e9e;}
+.btn-light {border: 1px solid #c38e9e; color:#c38e9e; background-color: white;}
+.btn-light:hover {color:#c38e9e; font-weight: bold;}
+.btn-light:active {color:#ffffff; background-color:#c38e9e;}
+.btn-light:visisted {color:#ffffff; background-color:#c38e9e;}
+.btn-seemore{border: 1px solid #c38e9e; color:#c38e9e; background-color: white; float: right; margin-top: 20px;}
+
+.step-title {margin-bottom:20px}
+
+/* Navigation */
+.navbar {margin-bottom: 0px;}
+.navbar-default {background-color: white;}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover
+{background-color:#ffffff;}
+.navbar-btn {border: 1px solid #c38e9e; color:#c38e9e; background-color: white; padding: 4px 10px;margin-top: 10px}
+.navbar-btn:visited {color:white; background-color: #c38e9e; }
+.navbar-btn:hover {color:white; background-color: #c38e9e; }
+.navbar-btn:active {color:white; background-color: #c38e9e;}
+.signup-btn {margin-right:10px;}
+.nav-btn {margin-left:11px;}
+/* Nav Bar Logged In*/
+.img-circle-nav {width:40px; height: auto; margin-top: 5px; margin-left: 15px;}
+
+/* Model PopUp Styles*/
+.filter-search-bar {background-color:#fff; width: 70%; text-align: left; border: 1px solid #d7d7d7;}
+h4.modal-title {color:#c38e9e; font-weight:bold}
+.modal-footer {text-align:left;}
+.input-info {font-size:11px; margin-top: 5px; margin-bottom: -5px;}
+
+/* Index */
+.header {background-image:url(../img/header-bg.png); background-size: cover;}
+.header-img {display:none;}
+
+/* Search Filter Styles */
+
+.form-horizontal .form-group {padding-left:15px; padding-right:15px;}
+.btn-category {color: #333; background-color: #fff; border-color: #ccc;}
+.btn-category:hover {color: #c38e9e; border-color: #c38e9e;}
+.btn-category:active {background-color:#c38e9e; color:white;}
+.btn.active, .btn:active {box-shadow:none; background-color:#c38e9e; color:white; border-color: #c38e9e;}
+.input { margin-top: -15px;}
+.form-horizontal .control-label {text-align: left;}
+
+/* Product Info */
+h3.category-title {margin-bottom: 30px;}
+.product-info {padding-top: 10px;}
+.product-title {width: 65%; float:left; overflow:hidden;}
+.product-price {width: 35%; float:right; text-align: right;}
+
+/* Index Intro */
+.jumbotron {background-color:#c38e9e;}
+.jumbotronbg { background-color:#e6d0d7;}
+h3.index-subtitle {color:white; font-size:21px;}
+h2.index-title {margin-bottom: 20px; font-size:25px; }
+.logo-m {width:60px; height: auto;}
+.jumbotron p {font-size:15px; line-height:34px;}
+.mainVideo {margin-top:5%}
+
+/* Product Page */
+h1.productPage-title {color: #c38e9e;}
+.productPage-label {margin-top: -5px;}
+.productPage-video {margin-top:15px;}
+.label-default { background-color:white;color:#c38e9e; padding:5px 10px; margin: 20px 3px; font-size: 85%;}
+.label-icon {height: 15px; width: auto; margin-right: 8px;}
+h3.title {color:#c38e9e; font-weight:bold;}
+h4.title {color:#c38e9e; font-weight:bold;}
+h5.comment-userName {font-weight:bold; display: inline-block;}
+.form-group{margin-bottom:10px;}
+p.orderWidget-price {margin:5px 0px 5px 0px;}
+ul.video-playlist-right {float: right; margin-right:100px;}
+ul.track-list li {list-style-type: none; margin-bottom: 10px;}
+.label-comment {background-color:#c38e9e; color:white; margin-left: 10px;}
+
+/* Order Widget */
+.productPage-orderWidget {display:none;}
+.productPage-mobileOrder {border-top:1px solid #c34e9e; background-color:white;}
+
+/* Partner Page */
+.partnerCards {margin-bottom: 20px;}
+.partnerCard-title {background-color:#c38e9e; border-top-left-radius: 10px; border-top-right-radius: 10px; padding: 5px; padding-left: 10px;}
+.partnerCard-body {padding: 10px; border:1px solid #c38e9e; border-bottom-right-radius:10px; border-bottom-left-radius:10px;}
+.partnerPage-spacing {margin-top:80px; margin-bottom: 60px;}
+ul.match4 li {margin:7px;}
+.partner-icon {height:30px; width:auto; margin-right: 10px;}
+h3.partnerPage-title {margin-bottom:30px;}
+h4.partnerTitle {margin-bottom: 20px;}
+.partner-icon-2 {display: block; margin-left: auto; margin-right: auto; float:none; width:100px; height:auto; margin-bottom:10px; margin-top: 40px;}
+.article {margin-bottom:40px;}
+ul.extra-nav  {display:none;}
+
+/* Partner Page */
+.signUp-spacing {margin-bottom: 40px; margin-top: 20px;}
+.input-spacing {margin-top:5px; margin-bottom: 5px;}
+p.info {font-size: 13px; margin-top: 3px;}
+
+/* Upload Styles */
+.kv-avatar .file-preview-frame,.kv-avatar .file-preview-frame:hover { margin: 0; padding: 0; border: none; box-shadow: none; text-align: center;}
+.kv-avatar .file-input { display: table-cell; max-width: 220px;}
+
+.progress-bar {background-color:#c38e9e}
+
+/* Messenger*/
+.messagebox {border:1px solid #DADADA; border-radius:5px; padding: 5px 0px; margin: 10px 0px;}
+a.message-link {color: #4d5254;}
+a.message-link:hover {font-weight: normal}
+.orderSpacing {margin-top:20px}
+
+
+/* Footer */
+ul.footer-ul {margin-top: 20px; font-weight: bold; margin-bottom: 40px; padding: 0px;}
+ul.footer-ul li {display: inline; margin:20px;}
+ul.footer-ul li a {color:#4d5254;font-weight: bold;}
+ul.footer-ul li a:hover {text-decoration: none; font-weight: bolder;}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+.show-only-mobile {display:none;}	
+	
+/* Navigation*/
+.nav-btn {margin-left:0px;}	
+/* Nav Bar Logged In*/
+.img-circle { margin-left: 0px;}
+	
+/* Index */
+.header-img {display:inline-block;}
+.header-img-mobile {display:none;}
+
+/* Index Intro */
+h3.index-subtitle {color:white; font-size:24px;}
+h2.index-title {margin-bottom: 20px; font-size:30px; }
+.logo-m {width:75px; height: auto;}
+.jumbotron p {font-size:18px; line-height:40px;}
+.index-text {margin-bottom:40px; padding-right:70px;}
+
+/* Search Filter Styles */
+h2.filter-title {color:#c38e9e; margin-bottom: 20px; font-size: 30px}
+.input { margin-top: 0px;}
+.filter-btn {margin-top: 10%;}
+
+/* Partner Page*/
+h2.partner-title {font-size:40px; margin-bottom:30px; margin-top:0px;}
+ul.extra-nav  {display:inline-block;  margin-bottom:-10px; margin-left: -60px;}
+ul.extra-nav li {display: inline; margin:20px;}	
+ul.extra-nav li a {color: white;}	
+	a.active {font-weight:bolder;}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width:  992px) { 
+/* Index */
+h2.index-title {font-size:40px;}
+.index-text {margin-top:40px; padding-right: 15px;}
+	
+/* Product Page */
+h1.productPage-title {margin-top:-5px;}
+.productPage-label {margin-top: -8px;}
+.productPage-video {margin-top: 10px;}	
+	
+/* Order Widget */
+.productPage-mobileOrder {display: none;}	
+.productPage-orderWidget {display: inline; margin-top:-91px; position: relative;}
+.productPage-orderTitle {background-color:#c38e9e; border-top-left-radius: 10px; border-top-right-radius: 10px; padding: 2px; padding-left: 10px;}
+.price-bg {background-color:#E6D0D7; margin:0px -10px 5px; padding:5px 10px;}
+
+/* Partner Page */
+.partner-icon-2 {float:right; margin-right:10px; margin-top: 30px; margin-bottom:30px;}	
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	#filter {height:auto; display: block;
+}
+/* Partner Page*/
+.partnerCards {margin-bottom:0px;}
+}
