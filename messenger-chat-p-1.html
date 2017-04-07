@@ -220,29 +220,238 @@
 	</div><!-- /Delete Profile -->
    <!-- /Nav Pop Ups -->
    
-    <!-- Begin page content -->
-    <!--Main-->
-    <div class="jumbotron">
-	  <div class="container">
-		<ul class="extra-nav">
-			<li><a href="terms.html">이용약관</a></li>
-			<li><a class="active" style="border-bottom: 2px solid white;" href="terms-partner.html">파트너 이용약관</a></li>
-			<li><a href="terms-personal.html">개인정보 보호약관</a></li>
-			<li><a href="terms-delete.html">취소 및 환불약관</a></li>
-		</ul>
-	  </div>
-	</div><!-- /Main-->
-	
-    
-		<div class="container">
-			<!-- /Title-->
-			<div class="title">
-				<h2 class="partner-title">파트너 이용약관</h2>
+   <!-- Page Pop Ups-->
+    <!-- Order Widget Mobile-->
+	<div id="orderWidget-mobile" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content" style="padding: 20px;">
+			<div class="row partnerInfo">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<img class="partnerInfoProfile img-circle" src="static/img/filler.jpg"> 
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+					<h4 class="partnerInfoUsername">소피아</h4>
+				</div>
 			</div>
-   			<p>
-   				
-   			</p>
-  		</div>
+			<div class="orderInfo" style="margin-top: 15px; padding-right: 10px;">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<p class="orderInfoLabel">상태</p>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+						<p class="orderStatusWaiting">예약 요청</p>
+					</div>
+				</div>
+				<div class="row orderSpacing">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<p class="orderInfoLabel">예식일</p>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+						<p>서2017. 4. 6 (토)   오후 3시 00분</p>
+					</div>
+				</div>
+				<div class="row orderSpacing">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<p class="orderInfoLabel">예식장</p>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+						<p>서울시 강남구 강남대로 115-1 신화 웨딩홀</p>
+					</div>
+				</div>
+				<div class="row orderSpacing">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<p class="orderInfoLabel">요청</p>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+						<p>임재범 고해 부탁드려요. 의상은 정장 부탁드립니다.</p>
+					</div>
+				</div>
+				<div class="row payment">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<p class="orderInfoLabel">결체</p>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+						<div>
+							<span>서울특별시</span><span style="float: right">￦220,000</span>
+						</div>
+						<div>
+							<span>서비스 수수료</span><span style="float:right">-￦22,000</span>
+						</div>
+						<div style="border-top: 1px solid black;">
+							<span>판매자 수익</span><span style="float:right">￦198,000</span>
+						</div>
+					</div>
+				</div>		
+						</div>				
+						<div style="margin-top:20px; margin-bottom: 20px">
+							<p class="info">
+								프딩의 결제시스템은 갑작스러운 고객의 예약 취소로 부터 판매자님의 수입을 보호하고 있습니다. 
+							</p>
+						</div>
+						
+						<div class="text-center">
+						 	<span>
+						 		<button class="btn btn-default dropdown-toggle" type="button">
+									예약요청 승인하기 
+							  	</button>
+							  	<button class="btn btn-default dropdown-toggle" type="button">
+									거절하기 
+							  	</button>
+							</span>
+							  <p style="font-size:12px; margin-top:10px;">
+							  	<span class="glyphicon glyphicon-time"></span> 승인 가능시간 11시간 42분 남았습니다. 
+							  	<a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="고객의 예약요청 시점 부터 12시간 이내에 예약요청을 승인하지 않으면 자동 거절 처리됩니다.">		
+							  		<span class="glyphicon glyphicon-question-sign"></span>
+						  		</a>
+							  </p>
+						</div>
+		</div>
+	  </div>
+	</div><!-- /Order Pop Up -->
+  	<!-- /Page Pop Ups-->
+   
+    <!-- Begin page content -->
+    <div class="container" style="padding-top: 10px;">
+     <!-- Mobile Order Widget -->
+      <!-- Trigger -->
+    	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mobileOrderWidgetTrigger">
+			<button type="button" class="btn btn-default" style="width:100%" date-dismiss="modal" data-toggle="modal" data-target="#orderWidget-mobile"><h4 style="color: white;">예약</h4>
+			</button>
+    	</div>
+    	
+    	<!-- Order Widget -->
+      <div class="col-lg-4 col-md-4 col-sm-0 col-xs-0 MessengerorderWidget">
+    		<div class="productPage-orderTitle"><h3 style="color: white;">예약</h3></div>
+				<div style="padding: 10px; border:1px solid #c38e9e; border-bottom-right-radius:10px; border-bottom-left-radius:10px;">
+					
+						<div class="row partnerInfo">
+							<div class="col-lg-3 col-md-3">
+								<img src="static/img/filler.jpg" class="img-circle" style="width: 60px; height: 60px"> 
+							</div>
+							<div class="col-lg-9 col-md-9">
+								<h4 style="font-weight:bold; margin-top:25px;">소피아</h4>
+							</div>
+						</div>
+						<div class="orderInfo" style="margin-top: 15px; padding-right: 10px;">
+							<div class="row ">
+								<div class="col-lg-3 col-md-12">
+									<p class="orderInfoLabel">상태</p>
+								</div>
+								<div class="col-lg-9 col-md-12">
+									<p class="orderStatusWaiting infoText">예약 요청</p>
+								</div>
+							</div>
+							<div class="row orderSpacing">
+								<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+									<p class="orderInfoLabel">예식일</p>
+								</div>
+								<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+									<p class="infoText">2017. 4. 6 (토)   오후 3시 00분</p>
+								</div>
+							</div>
+							<div class="row orderSpacing">
+								<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+									<p class="orderInfoLabel">예식장</p>
+								</div>
+								<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+									<p class="infoText">서울시 강남구 강남대로 115-1 신화 웨딩홀</p>
+								</div>
+							</div>
+							<div class="row orderSpacing">
+								<div class="col-lg-3 col-md-12">
+									<p class="orderInfoLabel">요청</p>
+								</div>
+								<div class="col-lg-9 col-md-12">
+									<p class="infoText">임재범 고해 부탁드려요. 의상은 정장 부탁드립니다.</p>
+								</div>
+							</div>
+							<div class="row payment" style="margin-top:10px;">
+								<div class="col-lg-3 col-md-12">
+									<p class="orderInfoLabel">결체</p>
+								</div>
+								<div class="col-lg-9 col-md-12 infoText" >
+									<div>
+										<span>서울특별시</span><span style="float: right">￦220,000</span>
+									</div>
+									<div>
+										<span>서비스 수수료</span><span style="float:right">-￦22,000</span>
+									</div>
+									<div style="border-top: 1px solid black;">
+										<span>판매자 수익</span><span style="float:right">￦198,000</span>
+									</div>
+								</div>
+							</div>		
+						</div>				
+						<div style="margin-top:20px; margin-bottom: 20px">
+							<p class="info">
+								프딩의 결제시스템은 갑작스러운 고객의 예약 취소로 부터 판매자님의 수입을 보호하고 있습니다. 
+							</p>
+						</div>
+						
+						<div class="text-center">
+						 	<span>
+						 		<button class="btn btn-default dropdown-toggle" type="button">
+									예약요청 승인하기 
+							  	</button>
+							  	<button class="btn btn-default dropdown-toggle" type="button">
+									거절하기 
+							  	</button>
+							</span>
+							  <p class="orderStatusWaiting" style="font-size:12px; margin-top:10px;">
+							  	<span class="glyphicon glyphicon-time"></span> 승인 가능시간 11시간 42분 남았습니다. 
+							  	<a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-content="고객의 예약요청 시점 부터 12시간 이내에 예약요청을 승인하지 않으면 자동 거절 처리됩니다.">		
+							  		<span class="glyphicon glyphicon-question-sign"></span>
+						  		</a>
+							  </p>
+						</div>
+				</div>
+    	</div> <!-- /Order Widget -->
+    	
+    	<!-- Begin Chat -->
+    	<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+    	
+    		<div class="chat-box">
+    			<div class="fdding-message row" style="margin-bottom: 10px;">
+    				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+						<img src="static/img/logo_m.png" class="img-circle" style="height:40px; width: 40px;">
+					</div>
+					<div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">
+						<div class="chatbox-fdding">
+							<p class="message-fdding">새로운 예약요청이 있습니다. 
+	예약 요청 승락 가능시간은 2017. 2. 2  오후 8:00까지 입니다. </p>
+						</div>
+						<span class="timestamp" style="font-size:11px;">오후 3:20</span>
+					</div>
+    			</div>
+    			<div class="fdding-message row">
+    				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+						<img src="static/img/logo_m.png" class="img-circle" style="width:40px; height: 40px;">
+					</div>
+					<div class="col-lg-11 col-md-11 col-ms-11 col-xs-10">
+						<div class="chatbox-fdding">
+							<p class="message-fdding">판매자님의 서비스 거절의사가 전달되었습니다.  </p>
+						</div>
+						<span class="timestamp" style="font-size:11px;">오후 3:20</span>
+					</div>
+    			</div>
+    		</div>
+    		<div class="chat-input">
+    			<div class="row input">
+					<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+						<textarea class="form-control" rows="1" id="writeMessage" placeholder="내용을 입력해주세요"></textarea>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+						<button class="btn btn-default" style="float: right; width: 100%">보내기</button>
+					</div>
+   				</div>
+    			<div class="allert">
+    				<p class="info">고객의 결제 완료 전에는 연락처 정보 공유를 금지하고 있습니다. 연락처 교환을 유도하실 경우 프딩의 규정에 따라 활동규제를 받을 수 있습니다.</p>
+    			</div>
+    		</div>
+    	</div><!-- /Chat -->
+    </div><!-- /Page Content -->
    
     <footer class="footer">
       <div class="container">
@@ -290,5 +499,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="static/js/bootstrap.min.js"></script>
+    <!-- Pop Over Function -->
+     <script>
+		$(function () {
+	  $('[data-toggle="popover"]').popover({placement: "left"})
+	})</script>
   </body>
 </html>

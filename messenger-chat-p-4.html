@@ -48,7 +48,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="static/index.html">
+		  <a class="navbar-brand" href="index.html">
 		  	<img class="brand" style="display: inline-block" src="static/img/logo_s.png">
 		  	<span style="color:#c38e9e; margin-left:10px;">beta</span>
 		  </a>
@@ -58,7 +58,7 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav navbar-right" id="signup-nav">
 		  	<li class="dropdown">
-				  <a href="static/help.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">도움말<span class="caret show-only-mobile"></span></a>
+				  <a href="help.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">도움말<span class="caret show-only-mobile"></span></a>
 				  <ul class="dropdown-menu">
 					<li><a href="faq.html">자주묻는 질문</a></li>
 					<li><a href="customers.html">고객 관련</a></li>
@@ -67,7 +67,7 @@
 				  </ul>
 			</li>
 			<li class="dropdown">
-				  <a href="static/partner.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">파트너<span class="caret show-only-mobile"></span></a>
+				  <a href="partner.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">파트너<span class="caret show-only-mobile"></span></a>
 				  <ul class="dropdown-menu">
 					<li><a href="partner.html">서비스 등록하기</a></li>
 					<li><a href="my-service.html">나의 서비스</a></li>
@@ -85,7 +85,7 @@
 			<li><a href="messenger.html">메시지 <span class="badge">42</span></a></li>
 			<li class="dropdown">
 			  <div class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				<img src="static/img/profile.png" alt="..." class="img-circle-nav">
+				<img src="static/img/profile.png" alt="..." class="img-circle img-circle-nav">
 				<span class="caret"></span>
 			  </div>
 			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -220,62 +220,72 @@
 	</div><!-- /Delete Profile -->
    <!-- /Nav Pop Ups -->
    
-    <!-- Begin page content -->
-    <div class="container">
-     	<!-- Order Widget -->
-      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 orderWidget">
-    		<div class="productPage-orderTitle"><h3 style="color: white;">예약</h3></div>
-				<div style="padding: 10px; border:1px solid #c38e9e; border-bottom-right-radius:10px; border-bottom-left-radius:10px;">
-					
-						<div class="row">
-							<div class="col-lg-3 col-md-3">
-								<img src="static/img/filler.jpg" class="img-circle" style="width: 60px; height: 60px"> 
-							</div>
-							<div class="col-lg-9 col-md-9">
-								<h4 style="font-weight:bold; margin-top:25px;">소피아</h4>
-							</div>
+   <!-- Page Pop Ups-->
+    <!-- Order Widget Mobile-->
+	<div id="orderWidget-mobile" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content" style="padding: 20px;">
+			<div class="row partnerInfo">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+					<img class="partnerInfoProfile img-circle" src="static/img/filler.jpg"> 
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+					<h4 class="partnerInfoUsername">소피아</h4>
+				</div>
+			</div>
+			<div class="orderInfo" style="margin-top: 15px; padding-right: 10px;">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<p class="orderInfoLabel">상태</p>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+						<p class="orderStatusSucces">예약 완료</p>
+					</div>
+				</div>
+				<div class="row orderSpacing">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<p class="orderInfoLabel">예식일</p>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+						<p>서2017. 4. 6 (토)   오후 3시 00분</p>
+					</div>
+				</div>
+				<div class="row orderSpacing">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<p class="orderInfoLabel">예식장</p>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+						<p>서울시 강남구 강남대로 115-1 신화 웨딩홀</p>
+					</div>
+				</div>
+				<div class="row orderSpacing">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<p class="orderInfoLabel">요청</p>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+						<p>임재범 고해 부탁드려요. 의상은 정장 부탁드립니다.</p>
+					</div>
+				</div>
+				<div class="row payment">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<p class="orderInfoLabel">결체</p>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+						<div>
+							<span>서울특별시</span><span style="float: right">￦220,000</span>
 						</div>
-						<div style="margin-top: 10px;">
-							<div class="col-lg-3 col-md-3">
-								<p style="font-weight: bold;">상태</p>
-							</div>
-							<div class="col-lg-9 col-md-9">
-								<p style="color: #c38e9e;">예약 요청</p>
-							</div>
+						<div>
+							<span>서비스 수수료</span><span style="float:right">-￦22,000</span>
 						</div>
-						<div class="orderSpacing">
-							<div class="col-lg-3 col-md-3">
-								<p class="labeling" style="font-weight: bold;">예식일</p>
-							</div>
-							<div class="col-lg-9 col-md-9">
-								<p>서울시 강남구 강남대로 115-1 신화 웨딩홀</p>
-							</div>
+						<div style="border-top: 1px solid black;">
+							<span>판매자 수익</span><span style="float:right">￦198,000</span>
 						</div>
-						<div class="orderSpacing">
-							<div class="col-lg-3 col-md-3">
-								<p class="labeling" style="font-weight: bold;">요청</p>
-							</div>
-							<div class="col-lg-9 col-md-9">
-								<p>임재범 고해 부탁드려요. 의상은 정장 부탁드립니다.</p>
-							</div>
-						</div>
-						<div class="orderSpacing">
-							<div class="col-lg-3 col-md-3">
-								<span class="labeling" style="font-weight: bold;">결체</span>
-							</div>
-							<div class="col-lg-9 col-md-9">
-								<div>
-									<span>서울특별시</span><span style="float: right">￦220,000</span>
-								</div>
-								<div>
-									<span>서비스 수수료</span><span style="float:right">-￦22,000</span>
-								</div>
-								<div style="border-top: 1px solid black;">
-									<span>판매자 수익</span><span style="float:right">￦198,000</span>
-								</div>
-							</div>
-						</div>					
-						<div style="margin-top:20px">
+					</div>
+				</div>		
+						</div>				
+						<div style="margin-top:20px; margin-bottom: 20px">
 							<p class="info">
 								프딩의 결제시스템은 갑작스러운 고객의 예약 취소로 부터 판매자님의 수입을 보호하고 있습니다. 
 							</p>
@@ -297,30 +307,175 @@
 						  		</a>
 							  </p>
 						</div>
+		</div>
+	  </div>
+	</div><!-- /Order Pop Up -->
+  	<!-- /Page Pop Ups-->
+   
+    <!-- Begin page content -->
+    <div class="container" style="padding-top: 10px;">
+     <!-- Mobile Order Widget -->
+      <!-- Trigger -->
+    	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mobileOrderWidgetTrigger">
+			<button type="button" class="btn btn-default" style="width:100%" date-dismiss="modal" data-toggle="modal" data-target="#orderWidget-mobile"><h4 style="color: white;">예약</h4>
+			</button>
+    	</div>
+    	
+    	<!-- Order Widget -->
+      <div class="col-lg-4 col-md-4 col-sm-0 col-xs-0 MessengerorderWidget">
+    		<div class="productPage-orderTitle"><h3 style="color: white;">예약</h3></div>
+				<div style="padding: 10px; border:1px solid #c38e9e; border-bottom-right-radius:10px; border-bottom-left-radius:10px;">
+					
+						<div class="row partnerInfo">
+							<div class="col-lg-3 col-md-3">
+								<img src="static/img/filler.jpg" class="img-circle" style="width: 60px; height: 60px"> 
+							</div>
+							<div class="col-lg-9 col-md-9">
+								<h4 style="font-weight:bold; margin-top:25px;">소피아</h4>
+							</div>
+						</div>
+						<div class="orderInfo" style="margin-top: 15px; padding-right: 10px;">
+							<div class="row ">
+								<div class="col-lg-3 col-md-12">
+									<p class="orderInfoLabel">상태</p>
+								</div>
+								<div class="col-lg-9 col-md-12">
+									<p class="orderStatusSucces infoText">예약 완료</p>
+								</div>
+							</div>
+							<div class="row orderSpacing">
+								<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+									<p class="orderInfoLabel">예식일</p>
+								</div>
+								<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+									<p class="infoText">2017. 4. 6 (토)   오후 3시 00분</p>
+								</div>
+							</div>
+							<div class="row orderSpacing">
+								<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+									<p class="orderInfoLabel">예식장</p>
+								</div>
+								<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+									<p class="infoText">서울시 강남구 강남대로 115-1 신화 웨딩홀</p>
+								</div>
+							</div>
+							<div class="row orderSpacing">
+								<div class="col-lg-3 col-md-12">
+									<p class="orderInfoLabel">요청</p>
+								</div>
+								<div class="col-lg-9 col-md-12">
+									<p class="infoText">임재범 고해 부탁드려요. 의상은 정장 부탁드립니다.</p>
+								</div>
+							</div>
+							<div class="row payment" style="margin-top:10px;">
+								<div class="col-lg-3 col-md-12 ">
+									<p class="orderInfoLabel">결체</p>
+								</div>
+								<div class="col-lg-9 col-md-12 infoText">
+									<div>
+										<span>서울특별시</span><span style="float: right">￦220,000</span>
+									</div>
+									<div>
+										<span>서비스 수수료</span><span style="float:right">-￦22,000</span>
+									</div>
+									<div style="border-top: 1px solid black;">
+										<span>판매자 수익</span><span style="float:right">￦198,000</span>
+									</div>
+								</div>
+							</div>		
+						</div>				
+						<div style="margin-top:20px; margin-bottom: 20px">
+							<p class="info">
+								프딩의 결제시스템은 갑작스러운 고객의 예약 취소로 부터 판매자님의 수입을 보호하고 있습니다. 
+							</p>
+						</div>
+						
+						<div class="text-center">
+						 	<span>
+						 		<button class="btn btn-default dropdown-toggle" type="button">
+									예약 취소하기
+							  	</button>
+							</span>
+							 
+						</div>
 				</div>
     	</div> <!-- /Order Widget -->
+    	
     	<!-- Begin Chat -->
-    	<div class="col-lg-8 col-md-8">
-    		<div class="chat-box" style="height: 85vh; border: 1px solid #4d4d4d;">
-    			<div class="col-lg-1 col-md-1">
-    				<img src="static/img/profile.png" class="img-circle" style="width:50px; height: 50px; margin-top: 10px;">
+    	<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+    	
+    		<div class="chat-box">
+    			<div class="fdding-message row" style="margin-bottom: 10px;">
+    				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+						<img src="static/img/logo_m.png" class="img-circle" style="height:40px; width: 40px;">
+					</div>
+					<div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">
+						<div class="chatbox-fdding">
+							<p class="message-fdding">[안심 메시지]
+예식장으로 이동 중 이신가요?
+신랑, 신부님께 도착 인사를 드린 후 즉시 아래의 '도착 체크 버튼'을 눌러주세요.  
+프딩은 예식 시작 1시간 전 도착하여 고객께 인사드리는 것을 원칙으로 하며 지각 시 벌점 및 활동 정지 등 규정에 의한 활동규제가 있을 수 있습니다. (도착 체크 시 고객에게판매자 도착 확인 메세지가 전달 되므로 꼭 고객께 인사를 드린 후 도착 인증버튼을 눌러주세요.) </p>
+					<div class="text-center" style="margin-top: 5px;">
+						<btn class="btn btn-light" style="width:80%;">[출석체크] 한시간 전 도착 완료하여 신부님께 인사 드렸습니다. </btn>
+						<btn class="btn btn-light" style="width:80%;">[지각체크] 지각이 예상되지만 예식 30분 이내에 도착할 수 있습니다. </btn>
+						<btn class="btn btn-light" style="width:80%;">[긴급상황] 부득이한 사정으로 인해 정상적인 서비스가 불가능합니다. </btn>
+					</div>
+						</div>
+	
+						<span class="timestamp" style="font-size:11px;">2017. 2. 1  오후   1:14</span>
+					</div>
     			</div>
-				<div class="col-lg-11">
-					
-				</div>
+  
+    			<div class="fdding-message row" style="margin-bottom: 10px;">
+    				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+						<img src="static/img/logo_m.png" class="img-circle" style="height:40px; width: 40px;">
+					</div>
+					<div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">
+						<div class="chatbox-fdding">
+							<p class="message-fdding">[안심 메시지]
+판매자님 오늘 오전 11:00 강남구 논현동 193-1  한성웨딩홀, 김인영 고객님의 웨딩이 있습니다.  예식 한시간 전까지 문제없이 도착하시나요?
+</p>
+							<div class="text-center" style="margin-top: 5px;">
+								<span>
+									<btn class="btn btn-light">문제 없음</btn>
+								</span>
+								<span>
+									<btn class="btn btn-light">문제 발생</btn>
+								</span>
+							</div>
+						</div>
+						<span class="timestamp" style="font-size:11px;">2017. 2. 1  오후   1:14</span>
+					</div>
+    			</div>
+    			<div class="fdding-message row" style="margin-bottom: 10px;">
+    				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
+						<img src="static/img/logo_m.png" class="img-circle" style="height:40px; width: 40px;">
+					</div>
+					<div class="col-lg-11 col-md-11 col-sm-11 col-xs-10">
+						<div class="chatbox-fdding">
+							<p class="message-fdding">새로운 예약요청이 있습니다. 
+예약 요청 승락 가능시간은 2017. 2. 2  오후 8:00까지 입니다. </p>
+						</div>
+						<span class="timestamp" style="font-size:11px;">2017. 2. 1  오후   1:14</span>
+					</div>
+    			</div>
     		</div>
     		<div class="chat-input">
-   				<div class="col-lg-11 col-md-11" style="margin-left: -15px">
-    				<textarea class="form-control" rows="1" id="writeMessage" placeholder="내용을 입력해주세요"></textarea>
+    			<div class="row input">
+					<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+						<textarea class="form-control" rows="1" id="writeMessage" placeholder="내용을 입력해주세요"></textarea>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+						<button class="btn btn-default" style="float: right; width: 100%">보내기</button>
+					</div>
+   				</div>
+    			<div class="allert">
+    				<p class="info">고객의 결제 완료 전에는 연락처 정보 공유를 금지하고 있습니다. 연락처 교환을 유도하실 경우 프딩의 규정에 따라 활동규제를 받을 수 있습니다.</p>
     			</div>
-    			<div class="col-lg-1 col-md-1" style="margin-left: -7px;">
-    				<button class="btn btn-default" style="margin: 0px;">보내기</button>
-    			</div>
-    			<p class="info">고객의 결제 완료 전에는 연락처 정보 공유를 금지하고 있습니다. 연락처 교환을 유도하실 경우 프딩의 규정에 따라 활동규제를 받을 수 있습니다.</p>
     		</div>
-    	</div><!-- Begin Chat -->
-    </div><!-- /Page content -->
-
+    	</div><!-- /Chat -->
+    </div><!-- /Page Content -->
+   
     <footer class="footer">
       <div class="container">
         	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
@@ -367,5 +522,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="static/js/bootstrap.min.js"></script>
+    <!-- Pop Over Function -->
+     <script>
+		$(function () {
+	  $('[data-toggle="popover"]').popover({placement: "left"})
+	})</script>
   </body>
 </html>
